@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webshop items</title>
+</head>
+
+<body>
+  <a href="/">Home</a>
+
+  <h1>All items</h1>
+
+  <form action="/items" method="POST">
+    <input type="text" name="name" placeholder="Name">
+    <input type="number" name="price" placeholder="Price">
+    <button type="submit">Save</button>
+  </form>
+
+  <% items.forEach((item)=> { %>
+    <h2>
+      <%= item.name %>
+    </h2>
+    <p>
+      <%= item.price %>
+    </p>
+    <% }); %>
+</body>
+
+</html>
